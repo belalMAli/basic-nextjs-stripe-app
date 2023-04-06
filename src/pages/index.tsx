@@ -62,8 +62,9 @@ export default function Home({ prices }: IProps) {
         ))}
       </main>
       <button
+        disabled={!item}
         onClick={createCheckOutSession}
-        className="bg-blue-500 hover:bg-blue-600 text-white block w-full py-2 rounded mt-2 disabled:cursor-not-allowed disabled:bg-blue-100"
+        className={styles.checkout}
       >
         Checkout
       </button>
